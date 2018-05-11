@@ -17,7 +17,7 @@ if (isset($_GET['login']) && isset($_GET['hash'])) {
 	else {
 		if ($hash == $user->hashFunc($username)) {
 			$ChangeData = new QueryUpdate($user->db, $target, $newValue, $selector, $username);
-			$_SESSION['alert'] = 'Your account has already been confirmed';
+			$_SESSION['alert'] = 'Your account has been confirmed';
 		}
 		else {
 			$_SESSION['alert'] = 'Wrong verification URL';
