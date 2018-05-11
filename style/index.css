@@ -25,6 +25,7 @@ header {
 #main {
 	display: block;
 	overflow: auto;
+    min-height: 1000px;
 }
 
 footer {

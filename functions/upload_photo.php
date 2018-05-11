@@ -4,19 +4,20 @@ session_start();
 require_once $_SERVER['DOCUMENT_ROOT'].'/camagru/config/setup.php';
 
 $dir_name = $_SERVER['DOCUMENT_ROOT'].'/camagru/'.'user_upload/';
-
 // Пути загрузки файлов
 // Массив допустимых значений типа файла
 $types = array('image/gif', 'image/png', 'image/jpeg');
 // Максимальный размер файла
 $size = 1024000;
 
+if(empty($_FILES['picture']['name']))
+	$_SESSION['upload'] = 'No photo';
 // Проверяем тип файла
-if (!in_array($_FILES['picture']['type'], $types)){
+else if (!in_array($_FILES['picture']['type'], $types)){
 	$_SESSION['upload'] = 'Bad file type';
 }
 // Проверяем размер файла
-if ($_FILES['picture']['size'] > $size){
+else if ($_FILES['picture']['size'] > $size){
 	$_SESSION['upload'] = 'Too big file';
 }
 else {

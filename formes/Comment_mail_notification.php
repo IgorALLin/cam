@@ -1,7 +1,7 @@
 <?php
 
 
-echo '<div class="form" name="Mail features" id="ch_mail_send">
+echo '<div class="form" name="Comment notification" id="ch_mail_send">
 		<h1>Resieve mail after comment under my photo?</h1>
 		<form action="functions/usersettings.php" method="post">
 			<input id ="yes" name="notification" type="radio" value="Y" checked>

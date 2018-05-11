@@ -13,7 +13,7 @@ if (!isset($_SESSION['form']) && !$user->isAuth())
 
 <head>
 	<title>Camagru</title>
-	<link rel="stylesheet" type="text/css" href="style/index.css?1">
+	<link rel="stylesheet" type="text/css" href="style/index.css?ver=3">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 

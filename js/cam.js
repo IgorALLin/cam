@@ -225,13 +225,16 @@ cam.then(function(value) {
             var video = document.getElementById('video');
             var response = ajax.responseText;
 
-            if (response) {
-                video.style.display = "none";
-                show_photo.style.display = "block";
+            if(response && response !== 'Bad file type' && response !== 'Too big file' && response !== 'No photo'){
                 upload_photo.innerHTML = '';
                 button.style.display = "block";
+                video.style.display = "none";
+                show_photo.style.display = "block";
+                show_photo.innerHTML = response;
             }
-            show_photo.innerHTML = response;
+            else{
+                upload_photo.innerHTML = response + upload_form;
+            }
         }
     }
     ajax.open("POST", "functions/get_user_upload_photo.php", true);

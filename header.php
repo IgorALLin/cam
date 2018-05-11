@@ -18,7 +18,7 @@ if ($user->isAuth()) {
 					<a href="#"><p>Change name</p></a>
 				    <a href="#"><p>Change mail</p></a>
 				    <a href="#"><p>Change password</p></a>
-				    <a href="#"><p>Mail features</p></a>
+				    <a href="#"><p>Comment notification</p></a>
 				</div>
 			  </div>';
 	}
